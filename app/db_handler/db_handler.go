@@ -1,9 +1,9 @@
 package db_handler
 
 import (
-	track_entry "spm/shared/track"
+	spm_types "spm/shared/spm_types"
 )
 
-func AddTrack(track_entry.Track) bool {
+func AddTrack(spm_types.Track) bool {
 	return true
 }

@@ -1,5 +1,6 @@
 package ui_terminal
 
+/*
 import (
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
@@ -33,3 +34,4 @@ func mainPageFlexInit() {
 		return event
 	})
 }
+*/

@@ -2,15 +2,24 @@ package cmd_handler
 
 import (
 	"spm/app/db_handler"
-	track_entry "spm/shared/track"
+	spm_types "spm/shared/spm_types"
 )
 
-var currentPlaylist []track_entry.Track
+var currentPlaylist []spm_types.Track
 
-func AddTrack(track track_entry.Track) bool {
+func AddTrack(track spm_types.Track) bool {
 	addToDbSuccess := db_handler.AddTrack(track)
 	if addToDbSuccess {
 		currentPlaylist = append(currentPlaylist, track)
 	}
 	return addToDbSuccess
+}
+
+func GetPlaylist(name string) (spm_types.Playlist, bool) {
+	// заглушка
+	return spm_types.GetPlaceholderPlaylist(name), true
+}
+
+func GetPlaylists() []spm_types.PlaylistPreview {
+	return spm_types.GetPlaceholderLibrary()
 }
